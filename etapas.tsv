@@ -1,0 +1,98 @@
+ALGORITMO	Bubble sort
+Entrada	5 3 4 1 2 	0	0	0
+5 > 3: troca	3 5 4 1 2 	1	1	0
+5 > 4: troca	3 4 5 1 2 	2	2	0
+5 > 1: troca	3 4 1 5 2 	3	3	0
+5 > 2: troca	3 4 1 2 5 	4	4	0
+3 > 4: mantem	3 4 1 2 5 	5	4	0
+4 > 1: troca	3 1 4 2 5 	6	5	0
+4 > 2: troca	3 1 2 4 5 	7	6	0
+3 > 1: troca	1 3 2 4 5 	8	7	0
+3 > 2: troca	1 2 3 4 5 	9	8	0
+1 > 2: mantem	1 2 3 4 5 	10	8	0
+Resultado	1 2 3 4 5 	10	8	0
+ALGORITMO	Selection sort
+Entrada	5 3 4 1 2 	0	0	0
+3 < 5: novo minimo	5 3 4 1 2 	1	0	0
+4 < 3: mantem minimo	5 3 4 1 2 	2	0	0
+1 < 3: novo minimo	5 3 4 1 2 	3	0	0
+2 < 1: mantem minimo	5 3 4 1 2 	4	0	0
+Posiciona minimo: i=0, menor=3	1 3 4 5 2 	4	1	0
+4 < 3: mantem minimo	1 3 4 5 2 	5	1	0
+5 < 3: mantem minimo	1 3 4 5 2 	6	1	0
+2 < 3: novo minimo	1 3 4 5 2 	7	1	0
+Posiciona minimo: i=1, menor=4	1 2 4 5 3 	7	2	0
+5 < 4: mantem minimo	1 2 4 5 3 	8	2	0
+3 < 4: novo minimo	1 2 4 5 3 	9	2	0
+Posiciona minimo: i=2, menor=4	1 2 3 5 4 	9	3	0
+4 < 5: novo minimo	1 2 3 5 4 	10	3	0
+Posiciona minimo: i=3, menor=4	1 2 3 4 5 	10	4	0
+Resultado	1 2 3 4 5 	10	4	0
+ALGORITMO	Insertion sort
+Entrada	5 3 4 1 2 	0	0	0
+Chave=3	5 3 4 1 2 	0	0	0
+5 > chave 3: sim	5 3 4 1 2 	1	0	0
+Desloca para indice 1	5 5 4 1 2 	1	0	1
+Insere chave no indice 0	3 5 4 1 2 	1	0	1
+Chave=4	3 5 4 1 2 	1	0	1
+5 > chave 4: sim	3 5 4 1 2 	2	0	1
+Desloca para indice 2	3 5 5 1 2 	2	0	2
+3 > chave 4: nao	3 5 5 1 2 	3	0	2
+Insere chave no indice 1	3 4 5 1 2 	3	0	2
+Chave=1	3 4 5 1 2 	3	0	2
+5 > chave 1: sim	3 4 5 1 2 	4	0	2
+Desloca para indice 3	3 4 5 5 2 	4	0	3
+4 > chave 1: sim	3 4 5 5 2 	5	0	3
+Desloca para indice 2	3 4 4 5 2 	5	0	4
+3 > chave 1: sim	3 4 4 5 2 	6	0	4
+Desloca para indice 1	3 3 4 5 2 	6	0	5
+Insere chave no indice 0	1 3 4 5 2 	6	0	5
+Chave=2	1 3 4 5 2 	6	0	5
+5 > chave 2: sim	1 3 4 5 2 	7	0	5
+Desloca para indice 4	1 3 4 5 5 	7	0	6
+4 > chave 2: sim	1 3 4 5 5 	8	0	6
+Desloca para indice 3	1 3 4 4 5 	8	0	7
+3 > chave 2: sim	1 3 4 4 5 	9	0	7
+Desloca para indice 2	1 3 3 4 5 	9	0	8
+1 > chave 2: nao	1 3 3 4 5 	10	0	8
+Insere chave no indice 1	1 2 3 4 5 	10	0	8
+Resultado	1 2 3 4 5 	10	0	8
+ALGORITMO	Merge sort
+Entrada	5 3 4 1 2 	0	0	0
+Divide [0,4] no meio 2	5 3 4 1 2 	0	0	0
+Divide [0,2] no meio 1	5 3 4 1 2 	0	0	0
+Divide [0,1] no meio 0	5 3 4 1 2 	0	0	0
+Intercala [0,0] e [1,1]	5 3 4 1 2 	0	0	0
+5 <= 3: copia menor	3 3 4 1 2 	1	0	1
+Copia restante esquerdo	3 5 4 1 2 	1	0	2
+Intercala [0,1] e [2,2]	3 5 4 1 2 	1	0	2
+3 <= 4: copia menor	3 5 4 1 2 	2	0	3
+5 <= 4: copia menor	3 4 4 1 2 	3	0	4
+Copia restante esquerdo	3 4 5 1 2 	3	0	5
+Divide [3,4] no meio 3	3 4 5 1 2 	3	0	5
+Intercala [3,3] e [4,4]	3 4 5 1 2 	3	0	5
+1 <= 2: copia menor	3 4 5 1 2 	4	0	6
+Copia restante direito	3 4 5 1 2 	4	0	7
+Intercala [0,2] e [3,4]	3 4 5 1 2 	4	0	7
+3 <= 1: copia menor	1 4 5 1 2 	5	0	8
+3 <= 2: copia menor	1 2 5 1 2 	6	0	9
+Copia restante esquerdo	1 2 3 1 2 	6	0	10
+Copia restante esquerdo	1 2 3 4 2 	6	0	11
+Copia restante esquerdo	1 2 3 4 5 	6	0	12
+Resultado	1 2 3 4 5 	6	0	12
+ALGORITMO	Quick sort
+Entrada	5 3 4 1 2 	0	0	0
+Particao [0,4]; pivo=2	5 3 4 1 2 	0	0	0
+5 <= pivo 2: mantem	5 3 4 1 2 	1	0	0
+3 <= pivo 2: mantem	5 3 4 1 2 	2	0	0
+4 <= pivo 2: mantem	5 3 4 1 2 	3	0	0
+1 <= pivo 2: esquerda	1 3 4 5 2 	4	1	0
+Pivo no indice 1	1 2 4 5 3 	4	2	0
+Particao [2,4]; pivo=3	1 2 4 5 3 	4	2	0
+4 <= pivo 3: mantem	1 2 4 5 3 	5	2	0
+5 <= pivo 3: mantem	1 2 4 5 3 	6	2	0
+Pivo no indice 2	1 2 3 5 4 	6	3	0
+Particao [3,4]; pivo=4	1 2 3 5 4 	6	3	0
+5 <= pivo 4: mantem	1 2 3 5 4 	7	3	0
+Pivo no indice 3	1 2 3 4 5 	7	4	0
+Resultado	1 2 3 4 5 	7	4	0
